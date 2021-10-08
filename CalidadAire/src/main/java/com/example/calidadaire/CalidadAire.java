@@ -17,7 +17,7 @@ public class CalidadAire {
         List<MedidaC02> lista_medidas = new ArrayList<MedidaC02>();
 
         for (int i = 0; i < FECHA.length; i++){
-
+            lista_medidas.add(new MedidaC02(FECHA[i], LELECTRONICA[i], LTELEMATICA[i], AULA9[i]));
         }
     }
 }
