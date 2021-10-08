@@ -12,7 +12,12 @@ public class CalidadAire {
     static int LTELEMATICA[] = {450, 500, 675, 875, 850, 700, 750, 880, 700, 600};
     static int AULA9[] = {450, 500, 550, 650, 700, 800, 750, 600, 650, 600};
 
-    List<MedidaC02> lista_medidas = new ArrayList<MedidaC02>();
+    public static void main(String args[]) {
 
-    for(int i = 0; i < LELEC; i++)
+        List<MedidaC02> lista_medidas = new ArrayList<MedidaC02>();
+
+        for (int i = 0; i < FECHA.length; i++){
+
+        }
+    }
 }
