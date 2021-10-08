@@ -1,7 +1,9 @@
 package com.example.calidadaire;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class CalidadAire {
     // Hora local Gandia Epoch del 7.10.2021 de las 8:00 am a las 17:00 pm
@@ -19,5 +21,15 @@ public class CalidadAire {
         for (int i = 0; i < FECHA.length; i++){
             lista_medidas.add(new MedidaC02(FECHA[i], LELECTRONICA[i], LTELEMATICA[i], AULA9[i]));
         }
+
+        Set<Integer> conjunto_medidas = new HashSet<Integer>();
+
+        for(int i = 0; i < lista_medidas.size(); i++){
+            conjunto_medidas.add(lista_medidas.get(i).getConc_a9());
+            conjunto_medidas.add(lista_medidas.get(i).getConc_elec());
+            conjunto_medidas.add(lista_medidas.get(i).getConc_telem());
+        }
+
+        System.out.println("Las medidas almacenados son " + conjunto_medidas + " y la cantidad es de " + lista_medidas.size());
     }
 }
