@@ -1,5 +1,8 @@
 package com.example.calidadaire;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MedidaC02 {
     private long t_mili;
     private int conc_elec;
@@ -43,5 +46,16 @@ public class MedidaC02 {
 
     public void setConc_a9(int conc_a9) {
         this.conc_a9 = conc_a9;
+    }
+
+    public boolean registrado(List<MedidaC02> lista){
+        for (MedidaC02 medida:
+             lista) {
+            if(medida.getT_mili() == this.getT_mili() && medida.getConc_elec() == this.getConc_elec() && medida.getConc_telem() == this.getConc_telem() && this.getConc_a9() == medida.getConc_a9()){
+                return true;
+            }
+        }
+
+        return false;
     }
 }

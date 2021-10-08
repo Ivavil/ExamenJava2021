@@ -65,5 +65,11 @@ public class CalidadAire {
         mapa_calidad.put("Aula9", contador_a9);
 
         System.out.println(mapa_calidad);
+
+        MedidaC02 prueba1 = new MedidaC02(1633590000000L, 650, 500, 500);
+        MedidaC02 prueba2 = new MedidaC02(1633586400000L, 650, 500, 350);
+
+        System.out.println(prueba1.registrado(lista_medidas));
+        System.out.println(prueba2.registrado(lista_medidas));
     }
 }
