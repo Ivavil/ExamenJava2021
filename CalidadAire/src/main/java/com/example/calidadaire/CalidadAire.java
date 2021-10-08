@@ -1,8 +1,10 @@
 package com.example.calidadaire;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 public class CalidadAire {
@@ -31,5 +33,37 @@ public class CalidadAire {
         }
 
         System.out.println("Las medidas almacenados son " + conjunto_medidas + " y la cantidad es de " + lista_medidas.size());
+
+        Map<String, Integer> mapa_calidad = new HashMap<String, Integer>();
+        //"LElectronica", "LTelematica" o "Aula9"
+
+        int contador_elec = 0;
+        for(int i = 0; i < LELECTRONICA.length; i++){
+            if(LELECTRONICA[i] >= 800 ){
+                contador_elec++;
+            }
+        }
+
+        mapa_calidad.put("LElectronica", contador_elec);
+
+        int contador_telem = 0;
+        for(int i = 0; i < LTELEMATICA.length; i++){
+            if(LTELEMATICA[i] >= 800 ){
+                contador_telem++;
+            }
+        }
+
+        mapa_calidad.put("LTelematica", contador_telem);
+
+        int contador_a9 = 0;
+        for(int i = 0; i < AULA9.length; i++){
+            if(AULA9[i] >= 800 ){
+                contador_a9++;
+            }
+        }
+
+        mapa_calidad.put("Aula9", contador_a9);
+
+        System.out.println(mapa_calidad);
     }
 }
